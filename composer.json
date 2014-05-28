@@ -1,5 +1,5 @@
 {
-    "name": "clearvox/aastra-model",
+    "name": "clearvox/aastra-phone",
     "description": "Aastra Models Library",
     "minimum-stability": "dev",
     "license": "MIT",
@@ -9,12 +9,15 @@
             "email": "leon@rowland.nl"
         }
     ],
+    "suggest": {
+        "clearvox/aastra-xml": "Allows use of pushing the generated XML to phones."
+    },
     "require": {
-        "php": ">=5.4.0"
+        "php": ">=5.4.0",
     },
     "autoload": {
         "psr-0": {
-            "Clearvox\\Aastra\\Model": "src/"
+            "Clearvox\\Aastra\\Phone": "src/"
         }
     }
 }
