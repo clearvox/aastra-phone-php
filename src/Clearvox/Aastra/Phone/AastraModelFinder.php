@@ -8,6 +8,7 @@ class AastraModelFinder
         'Aastra6730i' => 'Clearvox\\Aastra\\Phone\\Model\\Aastra6730i',
         'Aastra6731i' => 'Clearvox\\Aastra\\Phone\\Model\\Aastra6731i',
         'Aastra6735i' => 'Clearvox\\Aastra\\Phone\\Model\\Aastra6735i',
+        'Aastra6737i' => 'Clearvox\\Aastra\\Phone\\Model\\Aastra6737i',
         'Aastra6739i' => 'Clearvox\\Aastra\\Phone\\Model\\Aastra6739i',
         // 675X
         'Aastra6755i' => 'Clearvox\\Aastra\\Phone\\Model\\Aastra6755i',
