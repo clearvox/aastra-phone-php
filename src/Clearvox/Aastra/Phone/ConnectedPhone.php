@@ -15,20 +15,13 @@ use Clearvox\Aastra\XML\XMLObjectInterface;
 class ConnectedPhone
 {
     /**
-     * @var int
-     */
-    private $ip;
-
-    /**
      * @var \Clearvox\Aastra\Phone\Model\AastraModelInterface
      */
     private $model;
 
     /**
-     * Specify the network address of an unknown connected
-     * aastra phone.
-     *
-     * @param int $ip
+     * @param ConnectedDetails $details
+     * @param AastraModelInterface $model
      */
     public function __construct(ConnectedDetails $details, AastraModelInterface $model)
     {

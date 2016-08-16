@@ -1,6 +1,9 @@
 <?php
 namespace Clearvox\Aastra\Phone;
 
+use Clearvox\Aastra\Phone\Exception\InvalidModelNameException;
+use Clearvox\Aastra\Phone\Model\AastraModelInterface;
+
 class AastraModelFinder
 {
     private $registeredModels = array(
@@ -16,7 +19,9 @@ class AastraModelFinder
         // 68XX
         'Aastra6863i' => 'Clearvox\\Aastra\\Phone\\Model\\Aastra6863i',
         'Aastra6865i' => 'Clearvox\\Aastra\\Phone\\Model\\Aastra6865i',
-        'Aastra6867i' => 'Clearvox\\Aastra\\Phone\\Model\\Aastra6867i'
+        'Aastra6867i' => 'Clearvox\\Aastra\\Phone\\Model\\Aastra6867i',
+        'Aastra6869i' => 'Clearvox\\Aastra\\Phone\\Model\\Aastra6869i',
+        'Aastra6873i' => 'Clearvox\\Aastra\\Phone\\Model\\Aastra6873i',
     );
 
     /**
@@ -41,13 +46,13 @@ class AastraModelFinder
      * name.
      *
      * @param string $name
-     * @return Model|AastraModelInterface
-     * @throws Exception|InvalidModelNameException
+     * @return AastraModelInterface
+     * @throws InvalidModelNameException
      */
     public function getModel($name)
     {
         if ( ! array_key_exists($name, $this->registeredModels)) {
-            throw Exception\InvalidModelNameException($name);
+            throw new InvalidModelNameException($name);
         }
 
         return new $this->registeredModels[$name];
