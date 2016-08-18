@@ -3,7 +3,7 @@ namespace Clearvox\Aastra\Phone\Model;
 
 use Clearvox\Aastra\Phone\Model\Feature as Features;
 
-class Aastra6869i implements AastraModelInterface
+class Aastra6869i implements AastraModelInterface, SoftkeyPaginatedModelInterface
 {
     /**
      * Returns the number of lines that the Aastra
@@ -70,5 +70,49 @@ class Aastra6869i implements AastraModelInterface
     public function numberOfHardKeys()
     {
         return 7;
+    }
+
+    /**
+     * Returns the number of soft keys the phone can support
+     * per page.
+     *
+     * @return int
+     */
+    public function numberOfSoftKeysPerPage()
+    {
+        return 4;
+    }
+
+    /**
+     * Returns the number of total pages it can support of
+     * soft keys.
+     *
+     * @return int
+     */
+    public function numberOfSoftKeyPages()
+    {
+        return 6;
+    }
+
+    /**
+     * Returns the number of top soft keys the phone can support
+     * per page.
+     *
+     * @return int
+     */
+    public function numberOfTopSoftKeysPerPage()
+    {
+        return 11;
+    }
+
+    /**
+     * Returns the number of total pages of top soft keys that
+     * it can support.
+     *
+     * @return int
+     */
+    public function numberOfTopSoftKeyPages()
+    {
+        return 4;
     }
 }
