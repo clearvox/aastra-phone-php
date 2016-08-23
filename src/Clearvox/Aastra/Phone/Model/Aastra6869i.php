@@ -1,9 +1,13 @@
 <?php
 namespace Clearvox\Aastra\Phone\Model;
 
+use Clearvox\Aastra\Phone\Contracts\SupportsPaginatedSoftKeyInterface;
+use Clearvox\Aastra\Phone\Contracts\SupportsPaginatedTopSoftKeyInterface;
 use Clearvox\Aastra\Phone\Model\Feature as Features;
 
-class Aastra6869i implements AastraModelInterface, SoftkeyPaginatedModelInterface
+class Aastra6869i implements AastraModelInterface,
+    SupportsPaginatedTopSoftKeyInterface,
+    SupportsPaginatedSoftKeyInterface
 {
     /**
      * Returns the number of lines that the Aastra
