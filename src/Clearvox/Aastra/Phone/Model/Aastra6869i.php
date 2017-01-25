@@ -28,7 +28,7 @@ class Aastra6869i implements AastraModelInterface,
      */
     public function numberOfSoftKeys()
     {
-        return 5;
+        return 24;
     }
 
     /**
@@ -51,7 +51,7 @@ class Aastra6869i implements AastraModelInterface,
      */
     public function numberOfTopSoftKeys()
     {
-        return 12;
+        return 44;
     }
 
     /**
