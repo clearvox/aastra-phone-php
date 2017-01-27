@@ -1,9 +1,13 @@
 <?php
 namespace Clearvox\Aastra\Phone\Model;
 
+use Clearvox\Aastra\Phone\Contracts\SupportsPaginatedSoftKeyInterface;
+use Clearvox\Aastra\Phone\Contracts\SupportsPaginatedTopSoftKeyInterface;
 use Clearvox\Aastra\Phone\Model\Feature as Features;
 
-class Aastra6873i implements AastraModelInterface
+class Aastra6873i implements AastraModelInterface,
+    SupportsPaginatedTopSoftKeyInterface,
+    SupportsPaginatedSoftKeyInterface
 {
     /**
      * Returns the number of lines that the Aastra
@@ -71,5 +75,50 @@ class Aastra6873i implements AastraModelInterface
     {
         return 7;
     }
+
+    /**
+     * Returns the number of soft keys the phone can support
+     * per page.
+     *
+     * @return int
+     */
+    public function numberOfSoftKeysPerPage()
+    {
+        return 5;
+    }
+
+    /**
+     * Returns the number of total pages it can support of
+     * soft keys.
+     *
+     * @return int
+     */
+    public function numberOfSoftKeyPages()
+    {
+        return 6;
+    }
+
+    /**
+     * Returns the number of top soft keys the phone can support
+     * per page.
+     *
+     * @return int
+     */
+    public function numberOfTopSoftKeysPerPage()
+    {
+        return 12;
+    }
+
+    /**
+     * Returns the number of total pages of top soft keys that
+     * it can support.
+     *
+     * @return int
+     */
+    public function numberOfTopSoftKeyPages()
+    {
+        return 4;
+    }
+
 
 }
